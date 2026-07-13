@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lavish Systems | Building the Future of Entrepreneur Intelligence</title>
+
+  <meta
+    name="description"
+    content="Lavish Systems helps builders launch, grow, and scale with adaptive intelligence, guided systems, funnels, VSL tools, and trusted resources."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #f7f7f7;
+      background: #080808;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 8, 8, 0.94);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand span {
+      color: #d4af37;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      background: #d4af37;
+      color: #080808;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: #f7f7f7;
+      border: 1px solid rgba(247, 247, 247, 0.35);
+      margin-left: 10px;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 110px 0 90px;
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.18), transparent 38%),
+        linear-gradient(180deg, #111111 0%, #080808 100%);
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0 auto 22px;
+      font-size: clamp(2.6rem, 7vw, 5.6rem);
+      line-height: 1.04;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      color: #c7c7c7;
+      font-size: 1.15rem;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: #bcbcbc;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 16px;
+      background: #121212;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #bcbcbc;
+    }
+
+    .lav-section {
+      background: #101010;
+    }
+
+    .lav-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .lav-letter {
+      display: block;
+      color: #d4af37;
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .promise {
+      text-align: center;
+    }
+
+    .promise blockquote {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .promise blockquote span {
+      color: #d4af37;
+    }
+
+    .waitlist {
+      text-align: center;
+      background:
+        linear-gradient(rgba(8, 8, 8, 0.86), rgba(8, 8, 8, 0.96)),
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.24), transparent 55%);
+    }
+
+    .waitlist p {
+      max-width: 680px;
+      margin: 16px auto 28px;
+      color: #c7c7c7;
+    }
+
+    .email-note {
+      margin-top: 18px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid rgba(212, 175, 55, 0.18);
+      color: #9f9f9f;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .cards,
+      .lav-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button-secondary {
+        display: block;
+        width: fit-content;
+        margin: 12px auto 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#home">
+          Lavish <span>Systems</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#lav">Meet LAV</a>
+          <a href="#difference">Why Us</a>
+          <a href="#founding-builders">Founding Builders</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">Building the Future of Entrepreneur Intelligence</p>
+
+        <h1>Build Smarter. Grow Faster. Launch With Confidence.</h1>
+
+        <p>
+          Lavish Systems is an adaptive intelligence platform being created to
+          help builders plan, build, launch, and grow meaningful businesses
+          without being left wondering what to do next.
+        </p>
+
+        <a class="button" href="#founding-builders">
+          Become a Founding Builder
+        </a>
+
+        <a class="button button-secondary" href="#about">
+          Discover Our Mission
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our Purpose</p>
+          <h2>Intelligent systems built around the builder.</h2>
+
+          <p>
+            Lavish Systems exists to make launching, growing, and sustaining a
+            business simpler, more confident, and more secure. The platform is
+            designed to meet builders at their current skill level and guide
+            them step by step.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Guided Building</h3>
+            <p>
+              Clear direction, practical education, and a recommended next step
+              throughout the builder journey.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Adaptive Intelligence</h3>
+            <p>
+              Guidance that adjusts to each builder’s goals, experience,
+              industry, and progress.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Trust Before Transactions</h3>
+            <p>
+              Features, recommendations, and partnerships selected to create
+              genuine value for builders.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lav-section" id="lav">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Meet LAV</p>
+          <h2>One intelligence. Many guiding roles.</h2>
+
+          <p>
+            LAV is the intelligence layer planned for the Lavish Systems
+            platform. It will help builders understand what to do, why it
+            matters, and what should come next.
+          </p>
+        </div>
+
+        <div class="lav-grid">
+          <article class="card">
+            <span class="lav-letter">L</span>
+            <h3>Launch</h3>
+            <p>Transform an idea into something real and ready for the world.</p>
+          </article>
+
+          <article class="card">
+            <span class="lav-letter">A</span>
+            <h3>Accelerate</h3>
+            <p>
+              Grow through intelligent guidance, automation, and focused
+              improvement.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="lav-letter">V</span>
+            <h3>Victory</h3>
+            <p>
+              Reach meaningful goals and build something valuable that can
+              endure.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="difference">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why Lavish Systems</p>
+          <h2>Tools are useful. Knowing what to do next is powerful.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Campaign Workspaces</h3>
+            <p>
+              Organize funnels, VSLs, forms, emails, resources, and goals around
+              the campaign being built.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Professional Funnels</h3>
+            <p>
+              Guided funnels, bridge pages, email capture, single or double
+              opt-in, and a blank canvas for creative builders.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>VSL Communication Coaching</h3>
+            <p>
+              Build stronger hooks, clearer stories, trustworthy offers, and
+              calls to action that serve the audience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise">
+      <div class="container">
+        <blockquote>
+          “We measure our success by the
+          <span>success of our builders.</span>”
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="waitlist" id="founding-builders">
+      <div class="container">
+        <p class="eyebrow">Founding Builders</p>
+        <h2>Be part of what we are building.</h2>
+
+        <p>
+          The full Founding Builders waitlist is coming next. Until then, reach
+          us directly to express your interest, ask a question, or discuss a
+          future partnership.
+        </p>
+
+        <a
+          class="button"
+          href="mailto:info@lavishsystems.com?subject=Founding%20Builder%20Interest"
+        >
+          Contact Lavish Systems
+        </a>
+
+        <p class="email-note">info@lavishsystems.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        © 2026 Lavish Systems. Building intelligent systems for builders.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
