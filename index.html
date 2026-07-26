@@ -3,643 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Lavish Systems | Building the Future of Entrepreneur Intelligence</title>
-
-  <meta
-    name="description"
-    content="Lavish Systems helps builders launch, grow, and scale with adaptive intelligence, guided systems, funnels, VSL tools, and trusted resources."
-  >
-
+  <meta name="description" content="Lavish Systems is preparing Builder HQ and intelligent tools built for every Builder.">
+  <title>Lavish Systems | Coming Soon</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg: #071225;
+      --bg-soft: #0c1b35;
+      --primary: #1769ff;
+      --primary-bright: #39a0ff;
+      --text: #f7f9ff;
+      --muted: #b9c7dd;
+      --border: rgba(255,255,255,.12);
+      --panel: rgba(255,255,255,.055);
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #f7f7f7;
-      background: #080808;
+      min-height: 100vh;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(23,105,255,.24), transparent 34%),
+        radial-gradient(circle at 82% 72%, rgba(57,160,255,.16), transparent 32%),
+        linear-gradient(145deg, var(--bg), var(--bg-soft));
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+    .page {
+      width: min(1120px, 92%);
+      min-height: 100vh;
+      margin: auto;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 28px 0 22px;
     }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8, 8, 8, 0.94);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-      backdrop-filter: blur(12px);
-    }
-
-    nav {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
     .brand {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-
-    .brand span {
-      color: #d4af37;
-    }
-
-    .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
-      font-size: 0.95rem;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
-
-    .nav-links a:hover {
-      color: #d4af37;
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary-bright), var(--primary));
+      box-shadow: 0 0 30px rgba(23,105,255,.35);
     }
-
-    .button {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 8px;
-      background: #d4af37;
-      color: #080808;
-      font-weight: 700;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+    .brand-name small {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .62rem;
+      letter-spacing: .18em;
+      font-weight: 600;
     }
-
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: 0.92;
-    }
-
-    .button-secondary {
-      background: transparent;
-      color: #f7f7f7;
-      border: 1px solid rgba(247, 247, 247, 0.35);
-      margin-left: 10px;
-    }
-
-    .hero {
-      min-height: 82vh;
+    main {
       display: grid;
       place-items: center;
       text-align: center;
-      padding: 110px 0 90px;
-      background:
-        radial-gradient(circle at top, rgba(212, 175, 55, 0.18), transparent 38%),
-        linear-gradient(180deg, #111111 0%, #080808 100%);
+      padding: 70px 0;
     }
-
+    .hero { max-width: 850px; }
     .eyebrow {
-      color: #d4af37;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 24px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--panel);
+      color: #cfe6ff;
+      font-size: .84rem;
+      font-weight: 700;
+      letter-spacing: .08em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-bottom: 18px;
     }
-
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary-bright);
+      box-shadow: 0 0 14px var(--primary-bright);
+    }
     h1 {
-      max-width: 920px;
-      margin: 0 auto 22px;
-      font-size: clamp(2.6rem, 7vw, 5.6rem);
-      line-height: 1.04;
+      font-size: clamp(3rem, 8vw, 6.7rem);
+      line-height: .96;
+      letter-spacing: -.055em;
     }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 34px;
-      color: #c7c7c7;
-      font-size: 1.15rem;
+    h1 span {
+      background: linear-gradient(90deg, #fff, #70bdff 52%, #1769ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-
-    section {
-      padding: 90px 0;
+    .lead {
+      max-width: 690px;
+      margin: 28px auto 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      line-height: 1.75;
     }
-
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 44px;
+    .status {
+      margin: 38px auto 0;
+      width: min(640px, 100%);
+      padding: 20px 24px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: 0 24px 70px rgba(0,0,0,.22);
     }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
-      color: #bcbcbc;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      padding: 30px;
-      border-radius: 16px;
-      background: #121212;
-      border: 1px solid rgba(212, 175, 55, 0.18);
-    }
-
-    .card h3 {
-      color: #d4af37;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: #bcbcbc;
-    }
-
-    .lav-section {
-      background: #101010;
-    }
-
-    .lav-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .lav-letter {
-      display: block;
-      color: #d4af37;
-      font-size: 3rem;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .promise {
-      text-align: center;
-    }
-
-    .promise blockquote {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .promise blockquote span {
-      color: #d4af37;
-    }
-
-    .waitlist {
-      text-align: center;
-      background:
-        linear-gradient(rgba(8, 8, 8, 0.86), rgba(8, 8, 8, 0.96)),
-        radial-gradient(circle at center, rgba(212, 175, 55, 0.24), transparent 55%);
-    }
-
-    .waitlist p {
-      max-width: 680px;
-      margin: 16px auto 28px;
-      color: #c7c7c7;
-    }
-
-    .email-note {
-      margin-top: 18px;
-      font-size: 0.9rem;
-    }
-
+    .status strong { display: block; margin-bottom: 7px; font-size: 1rem; }
+    .status p { color: var(--muted); line-height: 1.6; font-size: .96rem; }
     footer {
-      padding: 34px 0;
-      border-top: 1px solid rgba(212, 175, 55, 0.18);
-      color: #9f9f9f;
-      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      color: #8fa2bf;
+      font-size: .85rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-
-    @media (max-width: 800px) {
-      .nav-links {
-        display: none;
-      }
-
-      .cards,
-      .lav-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .button-secondary {
-        display: block;
-        width: fit-content;
-        margin: 12px auto 0;
-      }
-    }/* Founding Builder popup */
-.builder-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(0, 0, 0, 0.82);
-  overflow-y: auto;
-}
-
-.builder-modal.is-open {
-  display: flex;
-}
-
-.builder-modal-content {
-  position: relative;
-  width: min(100%, 620px);
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 38px;
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 18px;
-  background: #101010;
-  color: #ffffff;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
-}
-
-.builder-modal-close {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  width: 38px;
-  height: 38px;
-  border: 0;
-  background: transparent;
-  color: #ffffff;
-  font-size: 28px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.builder-modal-eyebrow {
-  margin: 0 0 12px;
-  color: #d4af37;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-}
-
-.builder-modal-content h2 {
-  margin: 0 0 12px;
-  font-size: clamp(28px, 5vw, 42px);
-}
-
-.builder-modal-lav {
-  margin: 0 0 18px;
-  color: #d4af37;
-}
-
-.builder-modal-intro {
-  line-height: 1.7;
-  color: #dddddd;
-}
-
-.builder-modal-benefits {
-  margin: 22px 0;
-}
-
-.builder-modal-benefits p {
-  margin: 10px 0;
-}
-
-body.modal-open {
-  overflow: hidden;
-}
-
-@media (max-width: 600px) {
-  .builder-modal {
-    padding: 12px;
-  }
-
-  .builder-modal-content {
-    padding: 32px 22px 24px;
-  }
-}   
+    @media (max-width: 640px) {
+      main { padding: 56px 0; }
+      footer { justify-content: center; text-align: center; }
+    }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <a class="brand" href="#home">
-          Lavish <span>Systems</span>
-        </a>
-
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#lav">Meet LAV</a>
-          <a href="#difference">Why Us</a>
-          <a href="#founding-builders">Founding Builders</a>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-mark">LS</div>
+        <div class="brand-name">
+          Lavish Systems
+          <small>Built for every Builder</small>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <p class="eyebrow">Building the Future of Entrepreneur Intelligence</p>
-
-        <h1>Build Smarter. Grow Faster. Launch With Confidence.</h1>
-
-        <p>
-          Lavish Systems is an adaptive intelligence platform being created to
-          help builders plan, build, launch, and grow meaningful businesses
-          without being left wondering what to do next.
-        </p>
-
-        <a class="button" href="#founding-builders">
-          Become a Founding Builder
-        </a>
-
-        <a class="button button-secondary" href="#about">
-          Discover Our Mission
-        </a>
       </div>
-    </section>
+    </header>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Our Purpose</p>
-          <h2>Intelligent systems built around the builder.</h2>
-
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="dot"></span>Builder HQ is in development</div>
+        <h1><span>Something powerful is being built.</span></h1>
+        <p class="lead">
+          Lavish Systems is preparing Builder HQ and a new generation of intelligent
+          tools designed to help Builders create, connect, automate, and grow.
+        </p>
+        <div class="status">
+          <strong>Founding Builder access will open soon.</strong>
           <p>
-            Lavish Systems exists to make launching, growing, and sustaining a
-            business simpler, more confident, and more secure. The platform is
-            designed to meet builders at their current skill level and guide
-            them step by step.
+            We are completing the account, email, and back-office experience before
+            opening the doors.
           </p>
         </div>
+      </section>
+    </main>
 
-        <div class="cards">
-          <article class="card">
-            <h3>Guided Building</h3>
-            <p>
-              Clear direction, practical education, and a recommended next step
-              throughout the builder journey.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Adaptive Intelligence</h3>
-            <p>
-              Guidance that adjusts to each builder’s goals, experience,
-              industry, and progress.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Trust Before Transactions</h3>
-            <p>
-              Features, recommendations, and partnerships selected to create
-              genuine value for builders.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="lav-section" id="lav">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Meet LAV</p>
-          <h2>One intelligence. Many guiding roles.</h2>
-
-          <p>
-            LAV is the intelligence layer planned for the Lavish Systems
-            platform. It will help builders understand what to do, why it
-            matters, and what should come next.
-          </p>
-        </div>
-
-        <div class="lav-grid">
-          <article class="card">
-            <span class="lav-letter">L</span>
-            <h3>Launch</h3>
-            <p>Transform an idea into something real and ready for the world.</p>
-          </article>
-
-          <article class="card">
-            <span class="lav-letter">A</span>
-            <h3>Accelerate</h3>
-            <p>
-              Grow through intelligent guidance, automation, and focused
-              improvement.
-            </p>
-          </article>
-
-          <article class="card">
-            <span class="lav-letter">V</span>
-            
-          </article>
-        </div> lk         
-      </div>
-    </section>
-
-    <section id="difference">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Why Lavish Systems</p>
-          <h2>Tools are useful. Knowing what to do next is powerful.</h2>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Campaign Workspaces</h3>
-            <p>
-              Organize funnels, VSLs, forms, emails, resources, and goals around
-              the campaign being built.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Professional Funnels</h3>
-            <p>
-              Guided funnels, bridge pages, email capture, single or double
-              opt-in, and a blank canvas for creative builders.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>VSL Communication Coaching</h3>
-            <p>
-              Build stronger hooks, clearer stories, trustworthy offers, and
-              calls to action that serve the audience.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="promise">
-      <div class="container">
-        <blockquote>
-          “We measure our success by the
-          <span>success of our builders.</span>”
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="waitlist" id="founding-builders">
-      <div class="container">
-        <p class="eyebrow">Founding Builders</p>
-        <h2>Be part of what we are building.</h2>
-
-        <p>
-          The full Founding Builders waitlist is coming next. Until then, reach
-          us directly to express your interest, ask a question, or discuss a
-          future partnership.
-        </p>
-
-   
-<div class="founding-builders-form">
-  <script>
-    const formData = 'eyJGb3JtSWQiOjI1MjQ0NjMxLCJNYWlsU2VyaWVJZCI6MjQ5OTU0NzEsIk5hbWUiOiJGb3VuZGluZyBCdWlsZGVycyIsIlNob3dDb3VudCI6MCwiU3VibWlzc2lvbnMiOjAsIkZvcm1GaWVsZHMiOnsiRmlyc3ROYW1lIjp7InZhbHVlIjoiRmlyc3QgTmFtZSIsImNoZWNrZWQiOiIxIiwicmVxdWlyZWQiOiIwIn0sIkxhc3ROYW1lIjp7InZhbHVlIjoiTGFzdCBOYW1lIiwiY2hlY2tlZCI6IjAiLCJyZXF1aXJlZCI6IjAifSwiRnVsbE5hbWUiOnsidmFsdWUiOiJGdWxsIE5hbWUiLCJjaGVja2VkIjoiMCIsInJlcXVpcmVkIjoiMCJ9LCJFbWFpbCI6eyJ2YWx1ZSI6IlBsZWFzZSBlbnRlciB5b3VyIGVtYWlsIiwiY2hlY2tlZCI6IjEiLCJyZXF1aXJlZCI6IjEifX0sIlRoYW5reW91UGFnZSI6Imh0dHBzOlwvXC9sYXZpc2hzeXN0ZW1zLmNvbVwvdGhhbmsteW91Lmh0bWwiLCJTaWduZWRVcFBhZ2UiOiIiLCJJc0RvdWJsZU9wdEluIjoxLCJQYXNzRm9ybURhdGEiOjAsIlRyYWNrZXJOYW1lIjoiIiwiT3B0aW5TZW5kcyI6MCwiT3B0aW5GYWlsZWQiOjAsIlN1Ym1pdFZhbHVlIjoiU3VibWl0IiwiVXNlZEluIjoiIiwiQWN0aW9uIjoiaHR0cHM6XC9cL2dvZ3ZvLmNvbVwvc3Vic2NyaWJlLnBocCIsIkNhbXBhaWduQ29kZSI6ImlaYzJjbHRkRzlJVCIsIkFmZmlsaWF0ZU5hbWUiOiJnb3J5MTAxTkxTIiwiSW1hZ2VTcmMiOiJodHRwczpcL1wvZ29ndm8uY29tXC9zaG93X2Zvcm0ucGhwP2lkPTI1MjQ0NjMxJlRyYWNrUGFyYW09bmV3X2Zvcm0ifQ==';
-  </script>
-
-  <script src="https://gogvo.com/js/generate_form.js"></script>
-  <div id="25244631-form"></div>
-</div>
-</div>
-        <p class="email-note">info@lavishsystems.com</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        © 2026 Lavish Systems. Building intelligent systems for builders.
-      </p>
-    </div>
+    <footer>
+      <span>© 2026 Lavish Systems. All rights reserved.</span>
+      <span>Built for every Builder. Designed to grow with every dream.</span>
     </footer>
-    <div
-  class="builder-modal"
-  id="builder-form-modal"
-  aria-hidden="true"
->
-  <div
-  class="builder-modal-overlay"
-  id="builder-modal-overlay"
-  onclick="document.getElementById('builder-form-modal').classList.remove('is-open'); document.getElementById('builder-form-modal').setAttribute('aria-hidden','true'); document.body.style.overflow='';"
-</div>
-
-  <div
-    class="builder-modal-content"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="builder-modal-title"
-  >
-    <button
-  type="button"
-  class="builder-modal-close"
-  id="close-builder-form"
-  aria-label="Close form"
-  onclick="document.getElementById('builder-form-modal').classList.remove('is-open'); document.getElementById('builder-form-modal').setAttribute('aria-hidden','true'); document.body.style.overflow='';"
->
-      &times;
-    </button>
-
-    <p class="builder-modal-eyebrow">
-      LAVISH SYSTEMS
-    </p>
-
-    <h2 id="builder-modal-title">
-      Welcome, Builder.
-    </h2>
-
-    <p class="builder-modal-lav">
-      I’m <strong>LAV</strong> —
-      Learning • Assisting • Vision.
-    </p>
-
-    <p class="builder-modal-intro">
-      Join the Founding Builders community and receive
-      early Builder Pro previews, development updates,
-      beta invitations, and opportunities to help shape
-      the future of Lavish Systems.
-    </p>
-
-    <div class="builder-modal-benefits">
-      <p>✓ Early beta access</p>
-      <p>✓ Behind-the-scenes Builder Pro updates</p>
-      <p>✓ Founding Builder announcements</p>
-      <p>✓ Opportunities to help shape the platform</p>
-    </div>
-
-    <div class="sendshark-form-wrapper">
-      <script>
-        const formData = 'eyJGb3JtSWQiOjI1MjQ0NjMxLCJNYWlsU2VyaWVJZCI6MjQ5OTU0NzEsIk5hbWUiOiJGb3VuZGluZyBCdWlsZGVycyIsIlNob3dDb3VudCI6MCwiU3VibWlzc2lvbnMiOjAsIkZvcm1GaWVsZHMiOnsiRmlyc3ROYW1lIjp7InZhbHVlIjoiRmlyc3QgTmFtZSIsImNoZWNrZWQiOiIxIiwicmVxdWlyZWQiOiIwIn0sIkxhc3ROYW1lIjp7InZhbHVlIjoiTGFzdCBOYW1lIiwiY2hlY2tlZCI6IjAiLCJyZXF1aXJlZCI6IjAifSwiRnVsbE5hbWUiOnsidmFsdWUiOiJGdWxsIE5hbWUiLCJjaGVja2VkIjoiMCIsInJlcXVpcmVkIjoiMCJ9LCJFbWFpbCI6eyJ2YWx1ZSI6IlBsZWFzZSBlbnRlciB5b3VyIGVtYWlsIiwiY2hlY2tlZCI6IjEiLCJyZXF1aXJlZCI6IjEifX0sIlRoYW5reW91UGFnZSI6Imh0dHBzOlwvXC9sYXZpc2hzeXN0ZW1zLmNvbVwvdGhhbmsteW91Lmh0bWwiLCJTaWduZWRVcFBhZ2UiOiIiLCJJc0RvdWJsZU9wdEluIjoxLCJQYXNzRm9ybURhdGEiOjAsIlRyYWNrZXJOYW1lIjoiIiwiT3B0aW5TZW5kcyI6MCwiT3B0aW5GYWlsZWQiOjAsIlN1Ym1pdFZhbHVlIjoiU3VibWl0IiwiVXNlZEluIjoiIiwiQWN0aW9uIjoiaHR0cHM6XC9cL2dvZ3ZvLmNvbVwvc3Vic2NyaWJlLnBocCIsIkNhbXBhaWduQ29kZSI6ImlaYzJjbHRkRzlJVCIsIkFmZmlsaWF0ZU5hbWUiOiJnb3J5MTAxTkxTIiwiSW1hZ2VTcmMiOiJodHRwczpcL1wvZ29ndm8uY29tXC9zaG93X2Zvcm0ucGhwP2lkPTI1MjQ0NjMxJlRyYWNrUGFyYW09bmV3X2Zvcm0ifQ==';
-      </script>
-
-      <script src="https://gogvo.com/js/generate_form.js"></script>
-
-      <div id="25244631-form"></div>
-    </div>
-
-    <p class="builder-modal-privacy">
-      We respect your inbox. Unsubscribe at any time.
-    </p>
   </div>
-</div>
-  </footer>
-  <script>
-const builderModal = document.getElementById("builder-form-modal");
-const openBuilderForm = document.getElementById("open-builder-form");
-const closeBuilderForm = document.getElementById("close-builder-form");
-const builderModalOverlay = document.getElementById("builder-modal-overlay");
-
-function showBuilderForm() {
-    builderModal.classList.add("is-open");
-    builderModal.setAttribute("aria-hidden","false");
-    document.body.style.overflow="hidden";
-}
-
-function hideBuilderForm() {
-    builderModal.classList.remove("is-open");
-    builderModal.setAttribute("aria-hidden","true");
-    document.body.style.overflow="";
-}
-
-if(openBuilderForm){
-    openBuilderForm.addEventListener("click",showBuilderForm);
-}
-
-if(closeBuilderForm){
-    closeBuilderForm.addEventListener("click",hideBuilderForm);
-}
-
-if(builderModalOverlay){
-    builderModalOverlay.addEventListener("click",hideBuilderForm);
-}
-
-document.addEventListener("keydown",function(e){
-    if(e.key==="Escape"){
-        hideBuilderForm();
-    }
-});
-</script>
 </body>
 </html>
