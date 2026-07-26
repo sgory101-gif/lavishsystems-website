@@ -430,12 +430,13 @@
           future partnership.
         </p>
 
-        <a
-          class="button"
-          href="mailto:info@lavishsystems.com?subject=Founding%20Builder%20Interest"
-        >
-          Contact Lavish Systems
-        </a>
+        <button
+  type="button"
+  class="button"
+  id="open-builder-form"
+>
+  Become a Founding Builder
+</button>
 
         <p class="email-note">info@lavishsystems.com</p>
       </div>
@@ -448,6 +449,110 @@
         © 2026 Lavish Systems. Building intelligent systems for builders.
       </p>
     </div>
+    </footer>
+    <div
+  class="builder-modal"
+  id="builder-form-modal"
+  aria-hidden="true"
+>
+  <div
+    class="builder-modal-overlay"
+    id="builder-modal-overlay"
+  ></div>
+
+  <div
+    class="builder-modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="builder-modal-title"
+  >
+    <button
+      type="button"
+      class="builder-modal-close"
+      id="close-builder-form"
+      aria-label="Close form"
+    >
+      &times;
+    </button>
+
+    <p class="builder-modal-eyebrow">
+      LAVISH SYSTEMS
+    </p>
+
+    <h2 id="builder-modal-title">
+      Welcome, Builder.
+    </h2>
+
+    <p class="builder-modal-lav">
+      I’m <strong>LAV</strong> —
+      Learning • Assisting • Vision.
+    </p>
+
+    <p class="builder-modal-intro">
+      Join the Founding Builders community and receive
+      early Builder Pro previews, development updates,
+      beta invitations, and opportunities to help shape
+      the future of Lavish Systems.
+    </p>
+
+    <div class="builder-modal-benefits">
+      <p>✓ Early beta access</p>
+      <p>✓ Behind-the-scenes Builder Pro updates</p>
+      <p>✓ Founding Builder announcements</p>
+      <p>✓ Opportunities to help shape the platform</p>
+    </div>
+
+    <div class="sendshark-form-wrapper">
+      <script>
+        const formData = 'eyJGb3JtSWQiOjI1MjQ0NjMxLCJNYWlsU2VyaWVJZCI6MjQ5OTU0NzEsIk5hbWUiOiJGb3VuZGluZyBCdWlsZGVycyIsIlNob3dDb3VudCI6MCwiU3VibWlzc2lvbnMiOjAsIkZvcm1GaWVsZHMiOnsiRmlyc3ROYW1lIjp7InZhbHVlIjoiRmlyc3QgTmFtZSIsImNoZWNrZWQiOiIxIiwicmVxdWlyZWQiOiIwIn0sIkxhc3ROYW1lIjp7InZhbHVlIjoiTGFzdCBOYW1lIiwiY2hlY2tlZCI6IjAiLCJyZXF1aXJlZCI6IjAifSwiRnVsbE5hbWUiOnsidmFsdWUiOiJGdWxsIE5hbWUiLCJjaGVja2VkIjoiMCIsInJlcXVpcmVkIjoiMCJ9LCJFbWFpbCI6eyJ2YWx1ZSI6IlBsZWFzZSBlbnRlciB5b3VyIGVtYWlsIiwiY2hlY2tlZCI6IjEiLCJyZXF1aXJlZCI6IjEifX0sIlRoYW5reW91UGFnZSI6Imh0dHBzOlwvXC9sYXZpc2hzeXN0ZW1zLmNvbVwvdGhhbmsteW91Lmh0bWwiLCJTaWduZWRVcFBhZ2UiOiIiLCJJc0RvdWJsZU9wdEluIjoxLCJQYXNzRm9ybURhdGEiOjAsIlRyYWNrZXJOYW1lIjoiIiwiT3B0aW5TZW5kcyI6MCwiT3B0aW5GYWlsZWQiOjAsIlN1Ym1pdFZhbHVlIjoiU3VibWl0IiwiVXNlZEluIjoiIiwiQWN0aW9uIjoiaHR0cHM6XC9cL2dvZ3ZvLmNvbVwvc3Vic2NyaWJlLnBocCIsIkNhbXBhaWduQ29kZSI6ImlaYzJjbHRkRzlJVCIsIkFmZmlsaWF0ZU5hbWUiOiJnb3J5MTAxTkxTIiwiSW1hZ2VTcmMiOiJodHRwczpcL1wvZ29ndm8uY29tXC9zaG93X2Zvcm0ucGhwP2lkPTI1MjQ0NjMxJlRyYWNrUGFyYW09bmV3X2Zvcm0ifQ==';
+      </script>
+
+      <script src="https://gogvo.com/js/generate_form.js"></script>
+
+      <div id="25244631-form"></div>
+    </div>
+
+    <p class="builder-modal-privacy">
+      We respect your inbox. Unsubscribe at any time.
+    </p>
+  </div>
+</div>
   </footer>
+  <script>
+const builderModal = document.getElementById("builder-form-modal");
+const openBuilderForm = document.getElementById("open-builder-form");
+const closeBuilderForm = document.getElementById("close-builder-form");
+const builderModalOverlay = document.getElementById("builder-modal-overlay");
+
+function showBuilderForm() {
+    builderModal.classList.add("is-open");
+    builderModal.setAttribute("aria-hidden","false");
+    document.body.style.overflow="hidden";
+}
+
+function hideBuilderForm() {
+    builderModal.classList.remove("is-open");
+    builderModal.setAttribute("aria-hidden","true");
+    document.body.style.overflow="";
+}
+
+if(openBuilderForm){
+    openBuilderForm.addEventListener("click",showBuilderForm);
+}
+
+if(closeBuilderForm){
+    closeBuilderForm.addEventListener("click",hideBuilderForm);
+}
+
+if(builderModalOverlay){
+    builderModalOverlay.addEventListener("click",hideBuilderForm);
+}
+
+document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){
+        hideBuilderForm();
+    }
+});
+</script>
 </body>
 </html>
