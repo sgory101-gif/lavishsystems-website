@@ -430,10 +430,11 @@
           future partnership.
         </p>
 
-        <button
+       <button
   type="button"
   class="button"
   id="open-builder-form"
+  onclick="document.getElementById('builder-form-modal').classList.add('is-open'); document.getElementById('builder-form-modal').setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';"
 >
   Become a Founding Builder
 </button>
@@ -456,9 +457,10 @@
   aria-hidden="true"
 >
   <div
-    class="builder-modal-overlay"
-    id="builder-modal-overlay"
-  ></div>
+  class="builder-modal-overlay"
+  id="builder-modal-overlay"
+  onclick="document.getElementById('builder-form-modal').classList.remove('is-open'); document.getElementById('builder-form-modal').setAttribute('aria-hidden','true'); document.body.style.overflow='';"
+></div>>
 
   <div
     class="builder-modal-card"
@@ -467,11 +469,12 @@
     aria-labelledby="builder-modal-title"
   >
     <button
-      type="button"
-      class="builder-modal-close"
-      id="close-builder-form"
-      aria-label="Close form"
-    >
+  type="button"
+  class="builder-modal-close"
+  id="close-builder-form"
+  aria-label="Close form"
+  onclick="document.getElementById('builder-form-modal').classList.remove('is-open'); document.getElementById('builder-form-modal').setAttribute('aria-hidden','true'); document.body.style.overflow='';"
+>
       &times;
     </button>
 
